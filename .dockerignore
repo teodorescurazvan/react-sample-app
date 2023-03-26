@@ -1,0 +1,7 @@
+# folders that will not be included in the docker image
+.git
+node_modules
+build
+.dockerignore
+Dockerfile
+Dockerfile.prod
