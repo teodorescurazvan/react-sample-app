@@ -1,5 +1,5 @@
 # pull a node base image (alpine 13.12.0)
-FROM node:13.12.0-alpine
+FROM node:19.8.1-alpine3.17
 
 # set workdir
 WORKDIR ../react-sample-app
