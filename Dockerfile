@@ -7,9 +7,6 @@ WORKDIR /react-sample-app
 # add '/react-sample-app/node_modules/.bin' to $PATH
 ENV PATH /react-sample-app/node_modules/.bin:$PATH
 
-# npm set registry
-RUN npm config set registry https://registry.npmjs.org/
-
 # install latest version of npm
 RUN npm install -g npm@9.6.2
 
