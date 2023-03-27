@@ -2,10 +2,10 @@
 FROM node:19.8.1-alpine3.17
 
 # set workdir
-WORKDIR ../react-sample-app
+WORKDIR /react-sample-app
 
 # add '/react-sample-app/node_modules/.bin' to $PATH
-ENV PATH ../react-sample-app/node_modules/.bin:$PATH
+ENV PATH /react-sample-app/node_modules/.bin:$PATH
 
 # install latest version of npm
 RUN npm install -g npm@9.6.2
