@@ -14,7 +14,10 @@ RUN npm install -g npm@9.6.2
 COPY package.json ./
 
 # run install and build
-RUN npm install
+RUN npm ci
+RUN npm install react-scripts@3.4.1 -g
+
+COPY . ./
 RUN npm run build
 
 #production environment
