@@ -2,7 +2,7 @@ version: '2.17'
 
 services:
   sample-react-prod:
-    container_name: sample-react:prod
+    container_name: sample-react-prod
     build:
       context: .
       dockerfile: Dockerfile.prod
