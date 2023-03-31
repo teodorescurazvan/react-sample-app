@@ -9,11 +9,9 @@ ENV PATH /react-sample-app/node_modules/.bin:$PATH
 
 # install app dependencies
 COPY package.json ./
-COPY package-lock.json ./
 
 # run install and build
-RUN npm ci
-RUN npm install react-scripts@3.4.1 -g
+RUN npm install
 
 COPY . ./
 RUN npm run build
