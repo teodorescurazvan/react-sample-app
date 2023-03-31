@@ -12,7 +12,6 @@ RUN npm install -g npm@9.6.2
 
 # install app dependencies
 COPY package.json ./
-COPY package-lock.json ./
 
 # run install and build
 RUN npm install
