@@ -3,7 +3,7 @@ FROM node:19.8.1-alpine3.17 as build
 WORKDIR /react-sample-app
 ENV PATH /react-sample-app/node_modules/.bin:$PATH
 COPY package.json ./
-COPY package-lock.json ./
+RUN npm install
 RUN npm ci
 RUN npm run build
 
