@@ -7,13 +7,14 @@ WORKDIR /react-sample-app
 # add '/react-sample-app/node_modules/.bin' to $PATH
 ENV PATH /react-sample-app/node_modules/.bin:$PATH
 
-# install app dependencies
+# copy package.json
 COPY package.json ./
 
-# run install and build
+# install app dependencies
 RUN npm install
 RUN npm install react-scripts@3.4.1 -g
 
+# build app
 COPY . ./
 RUN npm run build
 
