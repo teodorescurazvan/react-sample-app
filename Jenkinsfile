@@ -22,9 +22,9 @@ node {
     stage('Redeploy container on latest image') {
         // Cleanup and respawn existing containers
         step {
+            // Remove all running containers
             sh '''docker stop $(docker ps -a -q)'''
-        }
-        step {
+            // Respawn PROD container on locale react-sample-app PROD image
             sh ''' docker run -d --name react-app-prod --rm -p 3002:80 react-sample-app:latest'''
         }
     }
