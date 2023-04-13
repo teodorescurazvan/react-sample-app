@@ -21,10 +21,8 @@ node {
     // Redeploy container
     stage('Redeploy container on latest image') {
         // Cleanup and respawn existing containers
-        step {
+        steps {
             sh 'docker rm $(docker ps --filter status=exited -q)'
-        }
-        step {
             sh 'docker run -dit --name react-app-prod --rm -p 3002:80 react-sample-app:latest' 
         }
     }
