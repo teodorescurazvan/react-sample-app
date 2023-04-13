@@ -18,14 +18,13 @@ node {
         }
     }
 
-    // Redeploy container
-    stage('Redeploy container on latest image') {
-        // Cleanup and respawn existing containers
-        step {
-            // Remove all running containers
-            sh '''docker stop $(docker ps -a -q)'''
-            // Respawn PROD container on locale react-sample-app PROD image
-            sh ''' docker run -d --name react-app-prod --rm -p 3002:80 react-sample-app:latest'''
-        }
+    // Cleanup containers
+    stage('Cleanup running containers') {
+        sh '''docker stop $(docker ps -a -q)'''
+    }
+
+    // Respawn PROD container on locale react-sample-app PROD image
+    stage ('Deploying latest image') {
+        sh ''' docker run -d --name react-app-prod --rm -p 3002:80 react-sample-app:latest'''
     }
 }
