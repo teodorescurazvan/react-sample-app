@@ -26,4 +26,16 @@ node {
             app.push("latest")
         }
     }
+
+    // Redeploy container
+    stage('Redeploy container on latest image') {
+        steps {
+                // Cleanup existing containers
+                sh 'docker rm $(docker ps --filter status=exited -q)'
+                // Recreate container with latest image
+                sh 'docker run -dit --name react-app-prod --rm -p 3002:80 react-sample-app:latest' 
+            }    
+        }
+
+    }
 }
