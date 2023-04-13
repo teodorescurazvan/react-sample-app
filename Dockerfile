@@ -1,4 +1,4 @@
-# pull a node base image (alpine 13.12.0)
+# pull a NodeJS base image (alpine 3.17)
 FROM node:19.8.1-alpine3.17
 
 # set workdir
