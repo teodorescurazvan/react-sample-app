@@ -3,7 +3,6 @@ node {
     // clonam repository-ul
     stage('Cloning repository') {
         git credentialsId: 'github', url: 'https://github.com/teodorescurazvan/react-sample-app'
-        }
     }
 
     // Build imaginea de Docker
