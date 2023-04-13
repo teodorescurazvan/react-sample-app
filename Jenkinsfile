@@ -7,7 +7,7 @@ node {
 
     // Build Docker image
     stage('Build image') {
-        app = docker.build("rteodore/react-sample-app", "Dockerfile.prod")
+        app = docker.build("rteodore/react-sample-app", "-f Dockerfile.prod .")
     } 
 
     // Push image to DockerHub
