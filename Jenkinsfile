@@ -20,7 +20,7 @@ node {
 
     // Cleanup containers
     stage('Cleanup running containers') {
-        sh '''docker stop $(docker ps -a -q)'''
+        sh '''docker container prune'''
     }
 
     // Respawn PROD container on locale react-sample-app PROD image
