@@ -16,7 +16,7 @@ node {
 
     // Build imaginea de Docker
     stage('Build image') {
-        app = docker.build("react-sample-app")
+        app = docker.build("rteodore/react-sample-app")
     } 
 
     // Push pe DockerHub
