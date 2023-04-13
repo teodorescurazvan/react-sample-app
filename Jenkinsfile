@@ -25,6 +25,6 @@ node {
 
     // Respawn PROD container on locale react-sample-app PROD image
     stage ('Deploying latest image') {
-        sh ''' docker run -d --name react-app-prod --rm -p 3002:80 react-sample-app:latest'''
+        sh ''' docker run -d -p 3002:80 react-sample-app:latest'''
     }
 }
