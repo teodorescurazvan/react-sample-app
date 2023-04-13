@@ -7,11 +7,11 @@ node {
 
     // Return current user
     stage('Return whoami') {
-         steps {
-         sh '''#!/bin/bash
-                 echo $whoami
-         '''
-    }
+        step {
+            sh '''#!/bin/bash
+                echo $whoami
+            '''
+        }
     }
 
     // Build imaginea de Docker
