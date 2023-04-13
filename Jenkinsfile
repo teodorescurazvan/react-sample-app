@@ -23,6 +23,6 @@ node {
         // Cleanup and respawn existing containers
         sh '''
             docker stop $(docker ps -aq))
-            docker run -dit --name react-app-prod --rm -p 3002:3002 react-sample-app:latest'''
+            docker run -dit --name react-app-prod --rm -p 3002:80 react-sample-app:latest'''
     }
 }
