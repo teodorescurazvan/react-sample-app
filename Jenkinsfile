@@ -25,6 +25,6 @@ node {
 
     // Respawn PROD container on locale react-sample-app PROD image
     stage ('Deploy latest image') {
-        sh '''docker run -d -p 3002:80 rteodore/react-sample-app:latest'''
+        sh '''docker run -d -p 80:3002 rteodore/react-sample-app:latest'''
     }
 }
